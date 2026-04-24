@@ -540,6 +540,343 @@
   .hero h1 { animation: fadeUp 0.6s ease 0.1s both; }
   .hero-sub { animation: fadeUp 0.6s ease 0.2s both; }
   .hero-guarantee { animation: fadeUp 0.6s ease 0.3s both; }
+
+
+  /* ─── RESPONSIVE MOBILE FIXES ─── */
+  @media (max-width: 1024px) {
+    header,
+    .hero,
+    .cards-section,
+    .trust-section,
+    .how-section,
+    .cta-section,
+    footer {
+      padding-left: 32px;
+      padding-right: 32px;
+    }
+
+    .cards-section {
+      grid-template-columns: 1fr;
+      gap: 18px;
+      max-width: 680px;
+      margin: 0 auto;
+    }
+
+    .card,
+    .card.featured {
+      border: 1px solid rgba(31,166,136,0.14);
+      border-radius: 18px;
+    }
+
+    .trust-grid {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 14px;
+    }
+
+    .steps {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 14px;
+    }
+  }
+
+  @media (max-width: 640px) {
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      line-height: 1.55;
+      -webkit-text-size-adjust: 100%;
+    }
+
+    header {
+      padding: 22px 18px 20px;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 16px;
+    }
+
+    header::after {
+      width: 240px;
+      height: 240px;
+      top: -90px;
+      right: -110px;
+    }
+
+    .logo-area {
+      gap: 12px;
+    }
+
+    .logo-svg {
+      width: 42px;
+      height: 42px;
+    }
+
+    .brand-name {
+      font-size: 17px;
+      letter-spacing: 2px;
+    }
+
+    .brand-sub {
+      font-size: 9px;
+      letter-spacing: 3px;
+    }
+
+    .header-contact {
+      text-align: left;
+      font-size: 11px;
+      line-height: 1.7;
+      width: 100%;
+      padding-top: 12px;
+      border-top: 1px solid rgba(255,255,255,0.06);
+    }
+
+    .hero {
+      padding: 48px 18px 42px;
+      text-align: left;
+    }
+
+    .hero-eyebrow {
+      font-size: 9px;
+      letter-spacing: 2.6px;
+      padding: 6px 12px;
+      margin-bottom: 18px;
+    }
+
+    .hero h1 {
+      font-size: clamp(34px, 11vw, 46px);
+      line-height: 1.04;
+      margin-bottom: 18px;
+      letter-spacing: -0.5px;
+    }
+
+    .hero-sub {
+      margin: 0 0 28px;
+      font-size: 15px;
+      max-width: 100%;
+    }
+
+    .hero-guarantee {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      font-size: 11px;
+      line-height: 1.4;
+      gap: 8px;
+    }
+
+    .hero-guarantee::before {
+      width: 28px;
+    }
+
+    .hero-guarantee::after {
+      display: none;
+    }
+
+    .cards-section {
+      padding: 42px 14px;
+      grid-template-columns: 1fr;
+      gap: 16px;
+    }
+
+    .card {
+      padding: 30px 20px;
+      border-radius: 18px;
+      box-shadow: 0 18px 45px rgba(0,0,0,0.18);
+    }
+
+    .card:hover {
+      transform: none;
+    }
+
+    .card-badge {
+      font-size: 8.5px;
+      letter-spacing: 2px;
+      margin-bottom: 14px;
+    }
+
+    .card-tier {
+      font-size: 29px;
+      line-height: 1.05;
+    }
+
+    .card-tagline {
+      font-size: 12px;
+      margin-bottom: 24px;
+    }
+
+    .pricing-row {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 18px;
+      margin-bottom: 24px;
+      padding-bottom: 22px;
+    }
+
+    .price-block .amount {
+      font-size: 30px;
+    }
+
+    .guarantee-box {
+      padding: 15px;
+      margin-bottom: 22px;
+      border-radius: 14px;
+    }
+
+    .guarantee-box .g-text {
+      font-size: 13px;
+    }
+
+    .features-list {
+      gap: 11px;
+    }
+
+    .features-list li {
+      font-size: 13px;
+      gap: 9px;
+    }
+
+    .ad-spend {
+      font-size: 12px;
+      line-height: 1.5;
+    }
+
+    .trust-section {
+      padding: 44px 14px;
+    }
+
+    .trust-label {
+      font-size: 9px;
+      letter-spacing: 3px;
+      margin-bottom: 24px;
+    }
+
+    .trust-grid {
+      grid-template-columns: 1fr;
+      gap: 12px;
+    }
+
+    .trust-item {
+      padding: 22px 18px;
+      border-radius: 16px;
+      text-align: left;
+      display: grid;
+      grid-template-columns: auto 1fr;
+      column-gap: 12px;
+      align-items: start;
+    }
+
+    .trust-item .t-icon {
+      grid-row: span 2;
+      margin-bottom: 0;
+      font-size: 19px;
+    }
+
+    .trust-item .t-title {
+      font-size: 12px;
+    }
+
+    .trust-item .t-desc {
+      font-size: 12px;
+    }
+
+    .how-section {
+      padding: 48px 14px;
+      text-align: left;
+    }
+
+    .section-eyebrow {
+      font-size: 9px;
+      letter-spacing: 3px;
+    }
+
+    .section-title {
+      font-size: 34px;
+      line-height: 1.05;
+      margin-bottom: 28px;
+    }
+
+    .steps {
+      grid-template-columns: 1fr;
+      gap: 12px;
+    }
+
+    .step {
+      padding: 24px 18px;
+      border-radius: 16px;
+    }
+
+    .step-num {
+      font-size: 38px;
+      margin-bottom: 10px;
+    }
+
+    .step-title {
+      font-size: 13px;
+    }
+
+    .step-desc {
+      font-size: 12.5px;
+    }
+
+    .cta-section {
+      padding: 52px 18px;
+      text-align: left;
+    }
+
+    .cta-section h2 {
+      font-size: 36px;
+      line-height: 1.05;
+    }
+
+    .cta-section p {
+      font-size: 14px;
+      margin-left: 0;
+      margin-right: 0;
+      margin-bottom: 28px;
+    }
+
+    .cta-button {
+      display: flex;
+      width: 100%;
+      justify-content: center;
+      align-items: center;
+      padding: 17px 18px;
+      border-radius: 14px;
+      font-size: 11px;
+      letter-spacing: 2px;
+      min-height: 54px;
+    }
+
+    .cta-note {
+      font-size: 11px;
+      line-height: 1.5;
+    }
+
+    footer {
+      padding: 24px 18px 32px;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 10px;
+      line-height: 1.5;
+    }
+  }
+
+  @media (max-width: 380px) {
+    .hero h1 {
+      font-size: 32px;
+    }
+
+    .card {
+      padding: 26px 16px;
+    }
+
+    .cta-section h2,
+    .section-title {
+      font-size: 31px;
+    }
+  }
+
 </style>
 </head>
 <body>
@@ -574,7 +911,7 @@
   </div>
   <div class="header-contact">
     <a href="mailto:business@risingshiftllc.com">business@risingshiftllc.com</a><br>
-    <a href="https://risingshiftllc.com">risingshiftllc.com</a><br>
+    <a href="https://risingshiftllc.com" target="_blank" rel="noopener noreferrer">risingshiftllc.com</a><br>
     Pricing valid for 14 days from issue date
   </div>
 </header>
